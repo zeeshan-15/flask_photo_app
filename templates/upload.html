@@ -1,24 +1,67 @@
-<!doctype html>
-<title>Python Flask Multiple Files Upload Example</title>
-<h2>Select file(s) to upload</h2>
-    <p>
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-            <ul class=flashes>
-            {% for message in messages %}
-              <li>{{ message }}</li>
-            {% endfor %}
-            </ul>
-          {% endif %}
-        {% endwith %}
-    </p>
-    <form method="post" action="/" enctype="multipart/form-data">
-        <dl>
-            <p>
-                <input type="file" name="files[]" multiple="true" autocomplete="off" required>
-            </p>
-        </dl>
-        <p>
-            <input type="submit" value="Submit">
-        </p>
-    </form>
+{#<!doctype html>#}
+{#<html>#}
+{#<head>#}
+{#    <title>Python Flask Multiple Files Upload Example</title>#}
+{##}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>#}
+{##}
+{##}
+{#</head>#}
+{#<body>#}
+{#<h2>Select file(s) to upload</h2>#}
+{#    <p>#}
+{#        {% with messages = get_flashed_messages() %}#}
+{#          {% if messages %}#}
+{#            <ul class=flashes>#}
+{#            {% for message in messages %}#}
+{#              <li>{{ message }}</li>#}
+{#            {% endfor %}#}
+{#            </ul>#}
+{#          {% endif %}#}
+{#        {% endwith %}#}
+{#    </p>#}
+{#    <form enctype="multipart/form-data">#}
+{#        <dl>#}
+{#            <p>#}
+{#                <input type="file" id="fileInput" name="files[]" multiple="true" autocomplete="off" required>#}
+{#            </p>#}
+{#        </dl>#}
+{#        <p>#}
+{#            <input type="submit" value="Submit">#}
+{#        </p>#}
+{#    </form>#}
+{#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>#}
+{#<script>#}
+{#    $(document).ready(function() {#}
+{##}
+{#	$('form').on('submit', function(event) {#}
+{##}
+{#		$.ajax({#}
+{#			data : {#}
+{#				fileInput : $('#fileInput').val()#}
+{#			},#}
+{#			type : 'POST',#}
+{#			url : '/'#}
+{#		})#}
+{#		.done(function(data) {#}
+{##}
+{#			if (data.error) {#}
+{#				$('#errorAlert').text(data.error).show();#}
+{#				$('#successAlert').hide();#}
+{#			}#}
+{#			else {#}
+{#				$('#successAlert').text(data.name).show();#}
+{#				$('#errorAlert').hide();#}
+{#			}#}
+{##}
+{#		});#}
+{##}
+{#		event.preventDefault();#}
+{##}
+{#	});#}
+{##}
+{#});#}
+{#</script>#}
+{#</body>#}
+{#</html>#}
